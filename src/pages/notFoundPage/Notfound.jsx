@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router';
-import { assets } from '../assets/images/assets';
+import { assets } from '../../assets/images/assets';
 const { notfound } = assets;
 const Notfound = () => {
     const navigate = useNavigate();
