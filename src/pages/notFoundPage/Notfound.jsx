@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router';
 import { assets } from '../assets/images/assets';
 const { notfound } = assets;
 const Notfound = () => {
-  const navigate = useNavigate();
+    const navigate = useNavigate();
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center text-center">
@@ -28,4 +28,4 @@ const Notfound = () => {
   );
 };
 
-export default Notfound;
+export default Notfound

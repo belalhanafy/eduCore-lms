@@ -5,13 +5,10 @@ import Loading from './components/student/Loading';
 import SignInPage from './auth/sign-in/SignInPage';
 import EduLayout from './EduLayout';
 import "quill/dist/quill.snow.css";
-import Cart from './pages/Cart';
-import WishList from './pages/WishList';
-import Payment from './Payment';
 import EduSignIn from './auth/educatorSign-in/EduSignIn';
 import EduSignUp from './auth/educatorSign-in/EduSignUp';
 import SignUpPage from './auth/sign-in/SignUpPage';
-import Notfound from './pages/Notfound';
+import Notfound from './pages/notFoundPage/Notfound';
 
 
 // Lazy-loaded components
@@ -25,7 +22,9 @@ const Dashboard = lazy(() => import('./pages/educator/Dashboard'));
 const AddCourse = lazy(() => import('./pages/educator/AddCourse'));
 const MyCourses = lazy(() => import('./pages/educator/MyCourses'));
 const StudentsEnrolled = lazy(() => import('./pages/educator/StudentsEnrolled'));
-
+const Cart = lazy(() => import('./pages/Cart'));
+const WishList = lazy(() => import('./pages/WishList'));
+const Payment = lazy(() => import('./Payment'));
 
 
 
@@ -63,8 +62,7 @@ function App() {
 
       <Route path="checkOut" element={<Payment />} />
 
-      <Route path="*" element={<Notfound/>} />
-
+      <Route path="*" element={<Notfound />} />
 
     </Routes>
   );

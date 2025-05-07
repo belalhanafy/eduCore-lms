@@ -377,7 +377,7 @@ export const AppProvider = ({ children }) => {
         enrolledCourses, setEnrolledCourses, addToCart, cart, setCart, isCartOpen, toggleCart, closeCart, removeFromCart,
         addToWishList, wishList, setWishList, removeFromWishList, educatorId, setEducatorId,
         filteredStudents, setFilteredStudents, studentId, getUserEnrolledCourses,
-        allEducators, setAllEducators, allStudents, setAllStudents, studentId, setStudentId, isStudent, setIsStudent,
+        allEducators, setAllEducators, allStudents, setAllStudents, setStudentId, isStudent, setIsStudent,
         handleEnroll, setIsEducator, handleGoToPayment, courseEnroll, getEnrolledStudents, clearCart, clearWishList
     };
 
