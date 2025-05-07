@@ -8,10 +8,11 @@ import "quill/dist/quill.snow.css";
 import Cart from './pages/Cart';
 import WishList from './pages/WishList';
 import Payment from './Payment';
-import NotFound from './pages/Notfound';
 import EduSignIn from './auth/educatorSign-in/EduSignIn';
 import EduSignUp from './auth/educatorSign-in/EduSignUp';
 import SignUpPage from './auth/sign-in/SignUpPage';
+import Notfound from './pages/Notfound';
+
 
 // Lazy-loaded components
 const Home = lazy(() => import('./pages/student/Home'));
@@ -42,7 +43,6 @@ function App() {
         <Route path="loading/:path" element={<Loading />} />
         <Route path="cart" element={<Cart />} />
         <Route path="wishList" element={<WishList />} />
-        {/* Fallback inside StdLayout */}
       </Route>
 
       {/* Routes with EducatorLayout */}
@@ -63,7 +63,7 @@ function App() {
 
       <Route path="checkOut" element={<Payment />} />
 
-      <Route path="*" element={<NotFound/>} />
+      <Route path="*" element={<Notfound/>} />
 
 
     </Routes>
