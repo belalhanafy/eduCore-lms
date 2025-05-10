@@ -3,14 +3,13 @@ import { AppContext } from '../context/AppContext';
 import { assets } from '../assets/images/assets';
 import humanizeDuration from "humanize-duration";
 import { useMatch } from 'react-router';
-import { p } from 'motion/react-client';
 
 const { down_arrow_icon, play_icon, blue_tick_icon } = assets;
 
 const Accordion = ({ course, setPlayerData }) => {
     const isPlayer = useMatch('/player/*')
     const [openChapters, setOpenChapters] = useState([]);
-    const { getChapterTime } = useContext(AppContext);
+    const { getChapterTime, isStudent } = useContext(AppContext);
 
 
 
@@ -56,7 +55,7 @@ const Accordion = ({ course, setPlayerData }) => {
                                     <li key={lecIndex} className="flex flex-col xl:flex-row justify-between py-2 ml-8">
                                         <div className='flex gap-2 items-center'>
                                             <img
-                                                src={lecture.isCompleted ? blue_tick_icon : play_icon}
+                                                src={(lecture.isCompleted && isStudent) ? blue_tick_icon : play_icon}
                                                 alt="play_icon"
                                                 className={`w-4 h-4`}
                                             />
